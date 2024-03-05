@@ -98,6 +98,7 @@ def Solve2(a,b,c):
     if n==-1:
         print("但这是不可能的")
         Exhaust(a,b,c,x0-1,y0-1)
+        return
     else:
         print("因此x≡%d mod %d"%(n%Mx,Mx))
     print("将方程两边同时对%d^%d=%d取模，得%d^y≡%d≡%d mod %d"%(a,x0,A,c,b,b%A,A))
@@ -105,6 +106,7 @@ def Solve2(a,b,c):
     if m==-1:
         print("但这是不可能的")
         Exhaust(a,b,c,x0-1,y0-1)
+        return
     else:
         print("因此y≡%d mod %d"%(m%My,My))
     while true:
